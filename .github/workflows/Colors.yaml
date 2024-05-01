@@ -1,0 +1,15 @@
+name: Colors
+
+on: workflow_dispatch
+
+jobs:
+    job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set color
+              id: color-generator
+              run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
+
+            - name: Get color
+              run: echo "${{ steps.color-generator.outputs.SELECTED_COLOR }}"
+
