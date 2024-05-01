@@ -12,3 +12,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Deploying branch to ${{ github.ref }} "
+            - run: echo "::error file=app.js,line=1::Missing semicolon"
