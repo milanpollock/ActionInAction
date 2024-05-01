@@ -34,6 +34,7 @@ on:
               description: 'Apply tag after successful test run'
               required: true
               type: boolean
+              default: true
             environment:
               description: 'Environment to run tests against'
               type: environment
