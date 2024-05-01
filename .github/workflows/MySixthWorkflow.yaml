@@ -17,6 +17,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                ::debug::Hello, World!
-                
+               echo "::debug::Hello, World!"
+
             - run: echo "Deploying branch to ${{ github.ref }} "
