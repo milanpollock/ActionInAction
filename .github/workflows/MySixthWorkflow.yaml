@@ -7,9 +7,6 @@ on:
             - main
     workflow_dispatch:
 
-env:
-    ACTIONS_STEP_DEBUG: true
-
 jobs:
     deploy:
         if: ${{ github.ref == 'refs/heads/main'}}
