@@ -1,15 +1,22 @@
 name: My Sixth Workflow
 
+
 on:
     push:
         branches:
             - main
     workflow_dispatch:
 
+env:
+    ACTIONS_STEP_DEBUG: true
+
+
 jobs:
     deploy:
         if: ${{ github.ref == 'refs/heads/main'}}
         runs-on: ubuntu-latest
         steps:
+            - run: |
+                ::debug::Hello, World!
+                
             - run: echo "Deploying branch to ${{ github.ref }} "
-            - run: echo "::error file=app.js,line=1::Missing semicolon"
