@@ -1,0 +1,24 @@
+name: Write Summary From Action
+
+on: [push]
+
+jobs:
+    write_summary_from_action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Write Summary from Action
+              uses: actions/github-script@v4
+              with: 
+                script: |
+                    await core.summary
+                        .addHeader('Test Results')
+                        .addTable([
+                            [{data: File, header: true}, {data: 'Result', header: true}],
+                            ['foo.js', 'Pass ✅'],
+                            ['bar.js', 'Fail ❌'],
+                            ['test.js', 'Pass ✅']
+                        ])
+                        .addLink('View Staging Deployment!', 'https://github.com')
+                        .write()
+
+
