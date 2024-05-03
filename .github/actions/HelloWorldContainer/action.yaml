@@ -1,0 +1,21 @@
+# https://github.com/actions/hello-world-docker-action
+name: 'Your name here'
+description: 'Provide a description here'
+author: 'Your name or organization here'
+inputs:
+  input_one:
+    description: 'Some info passed to the container'
+    required: false
+  input_two:
+    default: 'some default value'
+    description: 'Some info passed to the container'
+    required: false
+runs: 
+  using: 'docker'
+  image: 'Some info passed to the container'
+  args:
+    - ${{ inputs.input_one }}
+    - ${{ inputs.input_two }}
+  env:
+    VARIABLE1: ${{ inputs.input_one }}
+    VARIABLE2: ${{ inputs.input_two }}
