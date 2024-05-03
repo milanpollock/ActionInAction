@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                echo '### Hello world! : rocket:' >> $GITBUB_STEP_SUMMARY
+                echo '### Hello world! : rocket:' >> $GITHUB_STEP_SUMMARY
             - run: |
                 echo '### Love this feature! : medal_sports: ' >> $GITHUB_STEP_SUMMARY
             - run: |
