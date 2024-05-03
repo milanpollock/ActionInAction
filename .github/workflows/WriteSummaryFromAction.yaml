@@ -11,7 +11,7 @@ jobs:
               with: 
                 script: |
                     await core.summary
-                        .addHeader('Test Results')
+                        .addHeading('Test Results')
                         .addTable([
                             [{data: File, header: true}, {data: 'Result', header: true}],
                             ['foo.js', 'Pass ✅'],
